@@ -40,7 +40,7 @@ public class StartedServiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent serviceIntent = new Intent(StartedServiceActivity.this, StartedService.class);
-                serviceIntent.putExtra("URL","http://www.freepngimg.com/download/emoji/1-2-wink-emoji-png.png");
+                serviceIntent.putExtra("URL", "http://www.freepngimg.com/download/emoji/1-2-wink-emoji-png.png");
                 startService(serviceIntent);
                 statusText.setText("Started");
             }
@@ -65,9 +65,9 @@ public class StartedServiceActivity extends AppCompatActivity {
     private BroadcastReceiver mMessageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            String message = intent.getStringExtra("filename");
+            String filename = intent.getStringExtra("filename");
             try {
-                FileInputStream fileInputStream = openFileInput(message);
+                FileInputStream fileInputStream = openFileInput(filename);
                 BitmapFactory.Options option = new BitmapFactory.Options();
                 option.inPreferredConfig = Bitmap.Config.ARGB_8888;
                 imageView.setImageBitmap(BitmapFactory.decodeStream(fileInputStream));
@@ -77,11 +77,6 @@ public class StartedServiceActivity extends AppCompatActivity {
             }
 
 
-           // mImg.setImageBitmap(BitmapFactory.decodeFile(message));
-// mImg.setImageBitmap(BitmapFactory.decodeFile(path, option));
-// mImg.setImageDrawable(Drawable.createFromPath(path));
-           // mImg.setVisibility(View.VISIBLE);
-           // mText.setText(path);
         }
 
     };
