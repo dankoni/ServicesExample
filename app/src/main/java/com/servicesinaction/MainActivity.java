@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.servicesinaction.activites.BoundedServiceActivity;
+import com.servicesinaction.activites.IntentServiceActivity;
 import com.servicesinaction.activites.StartedServiceActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -93,6 +94,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_bounded_Messenger) {
 
         } else if (id == R.id.nav_intent_services) {
+            Intent intent = new Intent(MainActivity.this, IntentServiceActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
 

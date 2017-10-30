@@ -40,6 +40,9 @@
             android:name=".activites.IntentServiceActivity"
             android:label="@string/title_activity_intent_service"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <service android:name=".services.IntentServices"></service>
+
     </application>
 
 </manifest>

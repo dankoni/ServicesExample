@@ -13,11 +13,11 @@
         <item
             android:id="@+id/nav_bounded_Messenger"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:title="BoundedServiceMessenger" />
         <item
             android:id="@+id/nav_intent_services"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:title="IntentService" />
     </group>
 
     <item android:title="Communicate">
