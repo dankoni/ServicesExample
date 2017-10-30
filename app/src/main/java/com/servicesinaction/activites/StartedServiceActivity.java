@@ -1,4 +1,4 @@
-package com.servicesinaction;
+package com.servicesinaction.activites;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.servicesinaction.R;
 import com.servicesinaction.services.StartedService;
 
 import java.io.FileInputStream;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.servicesinaction.activites.BoundedServiceActivity"
-    tools:showIn="@layout/activity_bounded_service">
+    tools:context="com.servicesinaction.activites.IntentServiceActivity"
+    tools:showIn="@layout/activity_intent_service">
 
 </android.support.constraint.ConstraintLayout>

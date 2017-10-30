@@ -23,18 +23,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StartedServiceActivity"
+            android:name=".activites.StartedServiceActivity"
             android:label="@string/title_activity_started_service"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <service android:name=".services.StartedService" />
 
         <activity
-            android:name=".BoundedServiceActivity"
+            android:name=".activites.BoundedServiceActivity"
             android:label="@string/title_activity_bounded_service"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
-        <service android:name=".services.BoundedServiceBind"></service>
+        <service android:name=".services.BoundedServiceBind" />
+
+        <activity
+            android:name=".activites.IntentServiceActivity"
+            android:label="@string/title_activity_intent_service"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

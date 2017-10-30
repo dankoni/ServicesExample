@@ -14,6 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.servicesinaction.activites.BoundedServiceActivity;
+import com.servicesinaction.activites.StartedServiceActivity;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -89,7 +92,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_bounded_Messenger) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_intent_services) {
 
         } else if (id == R.id.nav_share) {
 
