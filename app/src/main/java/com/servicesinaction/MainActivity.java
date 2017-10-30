@@ -14,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.servicesinaction.services.BoundedServiceBind;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -82,12 +84,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_started) {
-            // Handle the camera action
             Intent intent = new Intent(MainActivity.this, StartedServiceActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_bounded) {
-
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_bounded_bind) {
+            Intent intent = new Intent(MainActivity.this, BoundedServiceBind.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_bounded_Messenger) {
 
         } else if (id == R.id.nav_manage) {
 

@@ -7,11 +7,11 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="StartedService" />
         <item
-            android:id="@+id/nav_bounded"
+            android:id="@+id/nav_bounded_bind"
             android:icon="@drawable/ic_menu_gallery"
             android:title="BoundedService" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_bounded_Messenger"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Slideshow" />
         <item
