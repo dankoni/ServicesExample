@@ -1,12 +1,14 @@
 package com.servicesinaction.services;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
+import android.support.v4.content.LocalBroadcastManager;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -40,9 +42,9 @@ public class StartedService extends Service {
 
     private class LongRunning extends AsyncTask<String, Void, String> {
 
-        private HttpURLConnection urlConnection;
         private URL url;
         private String filename ="demo.png";
+        private HttpURLConnection urlConnection;
 
         @Override
         protected String doInBackground(String... params) {
@@ -52,10 +54,11 @@ public class StartedService extends Service {
 
             try {
                 URL url = new URL(urlString);
-                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                 urlConnection = (HttpURLConnection) url.openConnection();
                 InputStream input = urlConnection.getInputStream();
                 Bitmap myBitmap = BitmapFactory.decodeStream(input);
-                out = new FileOutputStream(filename);
+                out =  openFileOutput(filename, Context.MODE_PRIVATE);
+
                 myBitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
 
 
@@ -63,14 +66,18 @@ public class StartedService extends Service {
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
-                urlConnection.disconnect();
+               urlConnection.disconnect();
             }
             return urlString;//ne ovo negi dowloaded stream
         }
 
         @Override
         protected void onPostExecute(String s) {
+                Intent intent = new Intent("custom-event-name");
+                intent.putExtra("filename", filename);
+                LocalBroadcastManager.getInstance(StartedService.this).sendBroadcast(intent);
             super.onPostExecute(s);
+            stopSelf();
         }
     }
 }
