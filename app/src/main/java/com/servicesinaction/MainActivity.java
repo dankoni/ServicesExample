@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.servicesinaction.activites.BoundedServiceActivity;
+import com.servicesinaction.activites.BoundedServiceMessengerActivity;
 import com.servicesinaction.activites.IntentServiceActivity;
 import com.servicesinaction.activites.StartedServiceActivity;
 
@@ -92,7 +93,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, BoundedServiceActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_bounded_Messenger) {
-
+            Intent intent = new Intent(MainActivity.this, BoundedServiceMessengerActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_intent_services) {
             Intent intent = new Intent(MainActivity.this, IntentServiceActivity.class);
             startActivity(intent);

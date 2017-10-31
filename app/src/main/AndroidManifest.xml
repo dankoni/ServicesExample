@@ -39,10 +39,15 @@
         <activity
             android:name=".activites.IntentServiceActivity"
             android:label="@string/title_activity_intent_service"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".services.IntentServices" />
+
+        <activity
+            android:name=".activites.BoundedServiceMessengerActivity"
+            android:label="@string/title_activity_bounded_service_messenger"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <service android:name=".services.IntentServices"></service>
-
+        <service android:name=".services.BoundedServiceMessager"></service>
     </application>
 
 </manifest>

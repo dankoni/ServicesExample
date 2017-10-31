@@ -8,4 +8,5 @@
     <string name="title_activity_started_service">StartedServiceActivity</string>
     <string name="title_activity_bounded_service">BoundedServiceActivity</string>
     <string name="title_activity_intent_service">IntentServiceActivity</string>
+    <string name="title_activity_bounded_service_messenger">BoundedServiceMessengerActivity</string>
 </resources>
